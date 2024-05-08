@@ -6,11 +6,6 @@ body {
 
 .homepage {
     padding: 20px;
-    background-image: url('https://ic.c4assets.com/brands/the-big-bang-theory/49a26338-6aaa-42a5-9af5-78f1b1149daf.jpg?imformat=chrome&resize=1160px:*'); /* Add your desired background image */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.2; /* High transparency */
 }
 
 .rules {
