@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Play Rock Paper Scissors Lizard Spock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game">
+        <div class="buttons">
+            <button onclick="playGame('Rock')"><img src="img1.jpg" alt="Rock"></button>
+            <button onclick="playGame('Paper')"><img src="img2.jpg" alt="Paper"></button>
+            <button onclick="playGame('Scissors')"><img src="img3.jpg" alt="Scissors"></button>
+            <button onclick="playGame('Lizard')"><img src="img4.jpg" alt="Lizard"></button>
+            <button onclick="playGame('Spock')"><img src="img5.jpg" alt="Spock"></button>
+        </div>
+        <div class="animation" id="animation">🔄</div>
+        <div class="results" id="results">
+            <!-- Player and computer choices will be displayed here -->
+        </div>
+        <div class="scoreboard">
+            <p>Player Score: <span id="playerScore">0</span></p>
+            <p>Computer Score: <span id="computerScore">0</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
