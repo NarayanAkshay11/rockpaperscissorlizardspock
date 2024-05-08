@@ -5,8 +5,6 @@ body {
 }
 
 .center-flex {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Full viewport height for vertical centering */
