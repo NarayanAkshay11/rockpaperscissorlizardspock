@@ -14,21 +14,16 @@ function playGame(playerMove) {
     const animationElement = document.getElementById('animation');
     const resultsElement = document.getElementById('results');
     
-    // Clear previous results
-    resultsElement.innerHTML = '';
+    resultsElement.innerHTML = ''; // Clear previous content
+    animationElement.textContent = '🔄'; // Display spinning icon
+    animationElement.classList.add('spinning'); // Optional: use a CSS class for animation
 
-    // Show animation
-    animationElement.classList.add('spinning');
-    animationElement.textContent = '🔄';
-
-    // Simulate computer move with delay
     setTimeout(() => {
         const computerMove = moves[Math.floor(Math.random() * moves.length)];
-
-        // Determine result
+        
         let resultText;
         if (playerMove === computerMove) {
-            resultText = 'It\'s a tie!';
+            resultText = "It's a tie!";
         } else if (rules[playerMove].includes(computerMove)) {
             resultText = `You win! ${playerMove} beats ${computerMove}`;
             playerScore++;
@@ -37,14 +32,13 @@ function playGame(playerMove) {
             computerScore++;
         }
 
-        // Display player and computer moves
-        const playerImg = `<img src="img${moves.indexOf(playerMove) + 1}.jpg" alt="${playerMove}">`;
-        const computerImg = `<img src="img${moves.indexOf(computerMove) + 1}.jpg" alt="${computerMove}">`;
-        
-        resultsElement.innerHTML = `
-            ${playerImg} VS ${computerImg}
-        `;
+        // Create images for player and computer moves
+        const playerImg = `<img src="img${moves.indexOf(playerMove) + 1}.jpg" alt="${playerMove}" class="move-img">`;
+        const computerImg = `<img src="img${moves.indexOf(computerMove) + 1}.jpg" alt="${computerMove}" class="move-img">`;
 
+        // Display images with "VS" between them
+        resultsElement.innerHTML = `${playerImg} <span>VS</span> ${computerImg}`;
+        
         // Update scores
         document.getElementById('playerScore').textContent = playerScore;
         document.getElementById('computerScore').textContent = computerScore;
@@ -52,5 +46,5 @@ function playGame(playerMove) {
         // Stop animation
         animationElement.classList.remove('spinning');
         animationElement.textContent = '';
-    }, 1500); // Delay for 1.5 seconds
+    }, 1500); // 1.5 seconds delay
 }
