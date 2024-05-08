@@ -4,6 +4,14 @@ body {
     margin: 0;
 }
 
+.center-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height for vertical centering */
+}
+
 .homepage {
     padding: 20px;
 }
@@ -18,8 +26,11 @@ body {
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
-
+.play-button:hover {
+    background-color: #005bb5;
+}
 .game {
     display: flex;
     flex-direction: column;
@@ -40,7 +51,7 @@ body {
 }
 
 .move-img {
-    width: 60px; /* Adjust size as needed */
+    width: auto;
     height: auto;
 }
 
