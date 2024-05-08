@@ -1,10 +1,20 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
+    margin: 0;
 }
 
 .homepage {
     padding: 20px;
+    background-image: url('background.jpg'); /* Add your desired background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2; /* High transparency */
+}
+
+.rules {
+    margin-top: 20px;
 }
 
 .play-button {
@@ -13,7 +23,6 @@ body {
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
-    margin-top: 20px;
 }
 
 .game {
@@ -25,14 +34,19 @@ body {
 
 .buttons {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     margin-bottom: 20px;
 }
 
 .buttons button {
-    margin: 5px;
-    padding: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.move-img {
+    width: 60px; /* Adjust size as needed */
+    height: auto;
 }
 
 .animation {
@@ -41,19 +55,21 @@ body {
 }
 
 .results {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    font-size: 18px;
     margin-bottom: 20px;
 }
 
-.results img {
-    width: 50px;
-    height: 50px;
+.scoreboard {
+    font-size: 18px;
 }
 
 @media (max-width: 768px) {
+    .buttons {
+        flex-direction: column;
+    }
+
     .results {
         flex-direction: column;
+        align-items: center;
     }
 }
