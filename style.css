@@ -3,6 +3,7 @@ body {
     text-align: center;
     margin: 0;
 }
+
 .center-flex {
     display: flex;
     flex-direction: column;
@@ -66,14 +67,6 @@ body {
 
 .scoreboard {
     font-size: 18px;
-}
-footer {
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 10px;
-    font-size: 14px;
-    color: #333;
-    position: relative; /* This ensures footer sticks at the bottom */
 }
 
 @media (max-width: 768px) {
