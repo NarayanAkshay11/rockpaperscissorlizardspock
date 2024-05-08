@@ -46,5 +46,5 @@ function playGame(playerMove) {
         // Stop animation
         animationElement.classList.remove('spinning');
         animationElement.textContent = '';
-    }, 1500); // 1.5 seconds delay
+    }, 1000); // 1.5 seconds delay
 }
