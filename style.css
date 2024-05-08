@@ -51,7 +51,7 @@ body {
 }
 
 .move-img {
-    width: 156px;
+    width: 215px;
     height: auto;
 }
 
@@ -72,6 +72,10 @@ body {
 @media (max-width: 768px) {
     .buttons {
         flex-direction: column;
+    }
+    .move-img {
+        width: 179px;
+        height: auto;
     }
 
     .results {
