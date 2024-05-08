@@ -8,16 +8,14 @@
 <body>
     <div class="game">
         <div class="buttons">
-            <button onclick="playGame('Rock')"><img src="1.jpg" alt="Rock"></button>
-            <button onclick="playGame('Paper')"><img src="2.jpg" alt="Paper"></button>
-            <button onclick="playGame('Scissors')"><img src="3.jpg" alt="Scissors"></button>
-            <button onclick="playGame('Lizard')"><img src="4.jpg" alt="Lizard"></button>
-            <button onclick="playGame('Spock')"><img src="5.jpg" alt="Spock"></button>
+            <button onclick="playGame('Rock')"><img src="1.jpg" alt="Rock" class="move-img"></button>
+            <button onclick="playGame('Paper')"><img src="2.jpg" alt="Paper" class="move-img"></button>
+            <button onclick="playGame('Scissors')"><img src="3.jpg" alt="Scissors" class="move-img"></button>
+            <button onclick="playGame('Lizard')"><img src="4.jpg" alt="Lizard" class="move-img"></button>
+            <button onclick="playGame('Spock')"><img src="5.jpg" alt="Spock" class="move-img"></button>
         </div>
         <div class="animation" id="animation">🔄</div>
-        <div class="results" id="results">
-            <!-- Player and computer choices will be displayed here -->
-        </div>
+        <div class="results" id="results"></div>
         <div class="scoreboard">
             <p>Player Score: <span id="playerScore">0</span></p>
             <p>Computer Score: <span id="computerScore">0</span></p>
