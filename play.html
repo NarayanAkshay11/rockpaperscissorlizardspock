@@ -6,21 +6,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="content"> <!-- Wrapper for content to maintain footer position -->
-        <div class="game center-flex">
-            <div class="buttons">
-                <button onclick="playGame('Rock')"><img src="img1.jpg" alt="Rock" class="move-img"></button>
-                <button onclick="playGame('Paper')"><img src="img2.jpg" alt="Paper" class="move-img"></button>
-                <button onclick="playGame('Scissors')"><img src="img3.jpg" alt="Scissors" class="move-img"></button>
-                <button onclick="playGame('Lizard')"><img src="img4.jpg" alt="Lizard" class="move-img"></button>
-                <button onclick="playGame('Spock')"><img src="img5.jpg" alt="Spock" class="move-img"></button>
-            </div>
-            <div class="animation" id="animation">🔄</div>
-            <div class="results" id="results"></div>
-            <div class="scoreboard">
-                <p>Player Score: <span id="playerScore">0</span></p>
-                <p>Computer Score: <span id="computerScore">0</span></p>
-            </div>
+    <div class="game center-flex">
+        <div class="buttons">
+            <button onclick="playGame('Rock')"><img src="img1.jpg" alt="Rock" class="move-img"></button>
+            <button onclick="playGame('Paper')"><img src="img2.jpg" alt="Paper" class="move-img"></button>
+            <button onclick="playGame('Scissors')"><img src="img3.jpg" alt="Scissors" class="move-img"></button>
+            <button onclick="playGame('Lizard')"><img src="img4.jpg" alt="Lizard" class="move-img"></button>
+            <button onclick="playGame('Spock')"><img src="img5.jpg" alt="Spock" class="move-img"></button>
+        </div>
+        <div class="animation" id="animation">🔄</div>
+        <div class="results" id="results"></div>
+        <div class="scoreboard">
+            <p>Player Score: <span id="playerScore">0</span></p>
+            <p>Computer Score: <span id="computerScore">0</span></p>
         </div>
     </div>
     <footer>
