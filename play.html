@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Menu Icon to toggle side menu -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <!-- Side Menu -->
+    <div class="side-menu" id="sideMenu">
+        <a href="home.html">Home</a>
+        <a href="play.html">Play</a>
+    </div>
+
+    <!-- Game section -->
     <div class="game center-flex">
         <div class="buttons">
             <button onclick="playGame('Rock')"><img src="img1.jpg" alt="Rock" class="move-img"></button>
@@ -21,11 +31,12 @@
             <p>Computer Score: <span id="computerScore">0</span></p>
         </div>
     </div>
+
     <footer>
-        <p><a href="index.html" >Rules</a></p>
-        <p> Game by Akshay Narayanan. Live Long and Prosper! </p>
+        <p><a href="index.html">Rules</a></p>
+        <p>Game by Akshay Narayanan. Live Long and Prosper!</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- Link to external JavaScript file -->
 </body>
 </html>
