@@ -1,10 +1,15 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Fredoka', sans-serif; /* Updated font */
     text-align: center;
     margin: 0;
+    background-image: url('background.jpg'); /* Background image */
+    background-size: cover; /* Ensure the image is zoomed and covers the screen */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Keep background fixed during scroll */
 }
 
 .center-flex {
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Full viewport height for vertical centering */
@@ -12,10 +17,6 @@ body {
 
 .homepage {
     padding: 20px;
-}
-
-.rules {
-    margin-top: 20px;
 }
 
 .play-button {
@@ -26,9 +27,11 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s;
 }
+
 .play-button:hover {
     background-color: #005bb5;
 }
+
 .game {
     align-items: center;
     padding: 20px;
@@ -65,6 +68,95 @@ body {
     font-size: 18px;
 }
 
+/* Pop-up Styles */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensures the pop-up appears above other elements */
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Overlay for the pop-up */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 500; /* Ensures it's below the pop-up */
+}
+
+/* Side Menu Styles */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background: #333;
+    color: white;
+    overflow: hidden;
+    transition: right 0.3s;
+    padding: 20px;
+    z-index: 2000;
+}
+
+.side-menu.open {
+    right: 0; /* Slide in the menu */
+}
+
+.side-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.side-menu a:hover {
+    background: #444;
+}
+
+/* Menu Icon */
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 3000;
+}
+
+/* Spinning animation for game */
+.spinning {
+    animation: spin 1s linear infinite; /* Optional CSS animation for spinning icon */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .buttons {
         flex-direction: column;
