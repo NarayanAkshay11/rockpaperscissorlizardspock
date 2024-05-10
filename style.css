@@ -1,18 +1,17 @@
 body {
-    font-family: 'Fredoka', sans-serif; /* Updated font */
+    font-family: 'Fredoka', sans-serif; /* Ensure proper font */
     text-align: center;
     margin: 0;
     background-image: url('background.jpg'); /* Background image */
-    background-size: cover; /* Ensure the image is zoomed and covers the screen */
+    background-size: cover; /* Fill the background */
     background-position: center; /* Center the image */
-    background-attachment: fixed; /* Keep background fixed during scroll */
+    background-attachment: fixed; /* Keep background fixed */
 }
 
 .center-flex {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height for vertical centering */
 }
 
 .homepage {
@@ -32,15 +31,10 @@ body {
     background-color: #005bb5;
 }
 
-.game {
-    align-items: center;
-    padding: 20px;
-}
-
 .buttons {
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    justify-content: space-evenly; /* Spaced evenly */
+    margin: 20px 0;
 }
 
 .buttons button {
@@ -50,22 +44,22 @@ body {
 }
 
 .move-img {
-    width: 215px;
+    width: 200px; /* Reduced width to ensure fitting */
     height: auto;
 }
 
 .animation {
     font-size: 32px;
-    margin-bottom: 20px;
 }
 
 .results {
     font-size: 18px;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .scoreboard {
     font-size: 18px;
+    margin-top: 20px; /* Separation from results */
 }
 
 /* Pop-up Styles */
@@ -78,8 +72,8 @@ body {
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Ensures the pop-up appears above other elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure pop-up is above all other elements */
 }
 
 .popup .close {
@@ -90,7 +84,6 @@ body {
     cursor: pointer;
 }
 
-/* Overlay for the pop-up */
 .overlay {
     position: fixed;
     top: 0;
@@ -108,66 +101,54 @@ body {
     right: -250px; /* Hidden by default */
     width: 250px;
     height: 100%;
-    background: #333;
-    color: white;
+    background: #333; /* Dark background for the menu */
+    color: white; /* White text */
     overflow: hidden;
-    transition: right 0.3s;
+    transition: right 0.3s; /* Smooth transition */
     padding: 20px;
     z-index: 2000;
 }
 
 .side-menu.open {
-    right: 0; /* Slide in the menu */
+    right: 0; /* Open state for the side menu */
 }
 
 .side-menu a {
-    color: white;
-    text-decoration: none;
+    color: white; /* White text for links */
+    text-decoration: none; /* No underline */
     display: block;
     padding: 10px;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #444; /* Border between links */
 }
 
 .side-menu a:hover {
-    background: #444;
+    background: #444; /* Hover effect */
 }
 
-/* Menu Icon */
 .menu-icon {
     position: fixed;
     top: 20px;
-    right: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 3000;
+    right: 20px; /* Position of menu icon */
+    font-size: 30px; /* Larger icon */
+    cursor: pointer; /* Change cursor to indicate clickability */
+    z-index: 3000; /* Ensure icon is on top */
 }
 
-/* Spinning animation for game */
-.spinning {
-    animation: spin 1s linear infinite; /* Optional CSS animation for spinning icon */
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/* Responsive adjustments */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .buttons {
-        flex-direction: column;
+        flex-direction: column; /* Stack buttons vertically */
     }
     .move-img {
-        width: 152px;
+        width: 150px; /* Smaller images for mobile */
         height: auto;
     }
 
     .results {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Align results vertically */
+    }
+
+    .scoreboard {
+        margin-top: 10px; /* Smaller margin */
     }
 }
