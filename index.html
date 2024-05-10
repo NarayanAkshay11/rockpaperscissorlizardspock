@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <title>Rock Paper Scissors Lizard Spock</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet"> <!-- Google Fonts -->
 </head>
 <body>
+    <!-- Menu Icon -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <!-- Side Menu -->
+    <div class="side-menu" id="sideMenu">
+        <a href="home.html">Home</a>
+        <a href="play.html">Play</a>
+    </div>
+
+    <!-- Pop-up -->
+    <div class="overlay" id="overlay" style="display: none;" onclick="closePopup()"></div> <!-- Overlay -->
+    <div class="popup" id="popup" style="display: none;">
+        <span class="close" onclick="closePopup()">✖</span> <!-- Close button -->
+        <h2>Game Instructions</h2>
+        <p>This is a classic game with a twist! Choose a move, and see who wins. Good luck!</p>
+    </div>
+
+    <!-- Home Page Content -->
     <div class="homepage center-flex">
         <h1>Rock, Paper, Scissors, Lizard, Spock</h1>
         <div class="rules">
@@ -21,11 +40,14 @@
             <p>Spock vaporizes Rock</p>
             <p>Rock crushes Scissors</p>
         </div>
-        <a href="play.html" class="play-button">Play Game</a>
+        <a href="play.html" class="play-button" onclick="showPopup()">Play Game</a> <!-- Display pop-up on click -->
     </div>
+
     <footer>
-        <p><a href="index.html" >Rules</a></p>
-        <p> Game by Akshay Narayanan. Live Long and Prosper! </p>
+        <p><a href="index.html">Rules</a></p>
+        <p>Game by Akshay Narayanan. Live Long and Prosper!</p>
     </footer>
+
+    <script src="script.js"></script> <!-- External JavaScript -->
 </body>
 </html>
