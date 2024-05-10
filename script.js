@@ -1,26 +1,22 @@
-// Toggle the side menu
 function toggleMenu() {
     const menu = document.getElementById('sideMenu');
-    if (menu.classList.contains('open')) {
-        menu.classList.remove('open');
-    } else {
-        menu.classList.add('open');
-    }
+    menu.classList.toggle('open');
 }
 
-// Show the pop-up
 function showPopup() {
     document.getElementById('popup').style.display = 'block';
     document.getElementById('overlay').style.display = 'block';
 }
 
-// Close the pop-up
 function closePopup() {
     document.getElementById('popup').style.display = 'none';
     document.getElementById('overlay').style.display = 'none';
 }
 
-// Game logic for Rock Paper Scissors Lizard Spock
+function goToPlayPage() {
+    window.location.href = "play.html"; // Redirect to the play page
+}
+
 const moves = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock'];
 let playerScore = 0;
 let computerScore = 0;
@@ -37,13 +33,12 @@ function playGame(playerMove) {
     const animationElement = document.getElementById('animation');
     const resultsElement = document.getElementById('results');
     
-    resultsElement.innerHTML = ''; // Clear previous content
-    animationElement.textContent = '🔄'; // Spinning icon
-    animationElement.classList.add('spinning'); 
+    animationElement.textContent = '🔄';
+    animationElement.classList.add('spinning');
 
     setTimeout(() => {
         const computerMove = moves[Math.floor(Math.random() * moves.length)];
-        
+
         let resultText;
         if (playerMove === computerMove) {
             resultText = "It's a tie!";
@@ -65,5 +60,5 @@ function playGame(playerMove) {
 
         animationElement.classList.remove('spinning');
         animationElement.textContent = '';
-    }, 1000); // 1 second delay
+    }, 1000);
 }
