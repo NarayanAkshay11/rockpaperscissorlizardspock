@@ -7,26 +7,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet"> <!-- Google Fonts -->
 </head>
 <body>
-    <!-- Menu Icon -->
+    <!-- Menu Icon to toggle side menu -->
     <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
     <!-- Side Menu -->
     <div class="side-menu" id="sideMenu">
-        <a href="home.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="play.html">Play</a>
     </div>
 
-    <!-- Pop-up -->
-    <div class="overlay" id="overlay" style="display: none;" onclick="closePopup()"></div> <!-- Overlay -->
+    <!-- Pop-up for Game Instructions -->
+    <div class="overlay" id="overlay" style="display: none;"></div> <!-- Overlay -->
     <div class="popup" id="popup" style="display: none;">
-        <span class="close" onclick="closePopup()">✖</span> <!-- Close button -->
+        <span class="close" onclick="goToPlayPage()">→</span> <!-- Close button with arrow -->
         <h2>Game Instructions</h2>
-        <p>This is a classic game with a twist! Choose a move, and see who wins. Good luck!</p>
+        <p>This is a classic game with a twist! Here's how to play:</p>
+        <ul>
+            <li>Scissors cuts Paper</li>
+            <li>Paper covers Rock</li>
+            <li>Rock crushes Lizard</li>
+            <li>Lizard poisons Spock</li>
+            <li>Spock smashes Scissors</li>
+            <li>Scissors decapitates Lizard</li>
+            <li>Lizard eats Paper</li>
+            <li>Paper disproves Spock</li>
+            <li>Spock vaporizes Rock</li>
+            <li>Rock crushes Scissors</li>
+        </ul>
     </div>
 
     <!-- Home Page Content -->
-    <div class="homepage center-flex">
-        <h1>Rock, Paper, Scissors, Lizard, Spock</h1>
+    <div class="homepage">
+        <h1>Rock, Paper, Scissors, Lizard, Spock</h1> <!-- Title at the top -->
         <div class="rules">
             <h2>Rules:</h2>
             <p>Scissors cuts Paper</p>
@@ -40,7 +52,7 @@
             <p>Spock vaporizes Rock</p>
             <p>Rock crushes Scissors</p>
         </div>
-        <a href="play.html" class="play-button" onclick="showPopup()">Play Game</a> <!-- Display pop-up on click -->
+        <a href="play.html" class="play-button" onclick="showPopup()">Play Game</a> <!-- Button below the text -->
     </div>
 
     <footer>
@@ -48,6 +60,6 @@
         <p>Game by Akshay Narayanan. Live Long and Prosper!</p>
     </footer>
 
-    <script src="script.js"></script> <!-- External JavaScript -->
+    <script src="script.js"></script> <!-- Link to external JavaScript -->
 </body>
 </html>
