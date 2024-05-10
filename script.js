@@ -4,13 +4,16 @@ function toggleMenu() {
 }
 
 function showPopup() {
-    document.getElementById('popup').style.display = 'block';
-    document.getElementById('overlay').style.display = 'block';
+    const popup = document.getElementById('popup');
+    const overlay = document.getElementById('overlay');
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
 }
 
 function closePopup() {
     document.getElementById('popup').style.display = 'none';
     document.getElementById('overlay').style.display = 'none';
+    window.location.href = 'play.html';
 }
 
 function goToPlayPage() {
@@ -32,9 +35,10 @@ const rules = {
 function playGame(playerMove) {
     const animationElement = document.getElementById('animation');
     const resultsElement = document.getElementById('results');
-    
+
+    // Reset and start animation
     animationElement.textContent = '🔄';
-    animationElement.classList.add('spinning');
+    animationElement.classList.add('spinning'); 
 
     setTimeout(() => {
         const computerMove = moves[Math.floor(Math.random() * moves.length)];
@@ -51,14 +55,13 @@ function playGame(playerMove) {
         }
 
         const playerImg = `<img src="img${moves.indexOf(playerMove) + 1}.jpg" alt="${playerMove}" class="move-img">`;
-        const computerImg = `<img src="img${moves.indexOf(computerMove) + 1}.jpg" alt="${computerMove}" class="move-img">`;
+        const computerImg = `<img src="img${moves.indexOf(computerMove) + 1}.jpg" class="move-img">`;
 
         resultsElement.innerHTML = `${playerImg} <span>VS</span> ${computerImg}`;
         
         document.getElementById('playerScore').textContent = playerScore;
         document.getElementById('computerScore').textContent = computerScore;
 
-        animationElement.classList.remove('spinning');
-        animationElement.textContent = '';
-    }, 1000);
+        animationElement.classList.remove('spinning'); // Stop animation
+    }, 1000); // 1-second delay
 }
